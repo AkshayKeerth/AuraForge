@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <title>Aura Forge</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/themes.css" />
+    </head>
+    <body>
+        <div id="login-overlay">
+            <div class="auth-card">
+                <h2 style="color: var(--accent-green)">AURA FORGE</h2>
+                <p style="color: var(--text-dim)">
+                    Enter your credentials to start earning
+                </p>
+                <input type="text" id="user-input" placeholder="Username" />
+                <input type="password" id="pass-input" placeholder="Password" />
+                <div
+                    style="
+                        margin-top: 20px;
+                        display: flex;
+                        gap: 10px;
+                        justify-content: center;
+                    "
+                >
+                    <button
+                        class="primary-btn"
+                        onclick="handleAuth('login')"
+                        style="padding: 10px 20px"
+                    >
+                        LOGIN
+                    </button>
+                    <button
+                        class="primary-btn"
+                        onclick="handleAuth('signup')"
+                        style="
+                            padding: 10px 20px;
+                            background: #333;
+                            color: white;
+                        "
+                    >
+                        SIGN UP
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="app-container">
+            <header class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-label"
+                        >USER:
+                        <span id="display-username" style="color: white"
+                            >---</span
+                        ></span
+                    >
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">NET WORTH</span>
+                    <span id="balance-display" class="stat-value">$0.00</span>
+                </div>
+            </header>
+
+            <main class="main-display">
+                <div id="roll-result" class="tier-common">
+                    <div class="placeholder-text">
+                        <h3>READY TO FORGE</h3>
+                        <p style="color: var(--text-dim)">Cost: $50.00</p>
+                    </div>
+                </div>
+                <button id="roll-btn" class="primary-btn" onclick="startRoll()">
+                    STEAL A BRAINROT
+                </button>
+            </main>
+        </div>
+
+        <script src="js/animations.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

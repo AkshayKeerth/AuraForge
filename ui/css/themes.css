@@ -1,0 +1,67 @@
+/* Rarity Tiers */
+
+/* Common */
+.tier-common {
+    border-color: #ffffff !important;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Rare */
+.tier-rare {
+    border-color: #00dbff !important;
+    box-shadow: 0 0 15px rgba(0, 219, 255, 0.4);
+    color: #00dbff;
+}
+
+/* Legendary */
+.tier-legendary {
+    border-color: #ff00ff !important;
+    background: radial-gradient(
+        circle,
+        rgba(255, 0, 255, 0.1) 0%,
+        rgba(30, 30, 30, 1) 70%
+    ) !important;
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.6);
+    color: #ff00ff;
+    animation: pulse-gold 2s infinite;
+}
+
+/* Mythic / Giga Brainrot */
+.tier-mythic {
+    border-color: #ff3e3e !important;
+    background: linear-gradient(45deg, #1e1e1e 0%, #4a0000 100%) !important;
+    box-shadow: 0 0 50px rgba(255, 62, 62, 0.8);
+    color: #ff3e3e;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes pulse-gold {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 0, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
+    }
+}
+
+/* Global Screen Effects */
+.glitch-bg {
+    animation: bg-flash 0.2s 3;
+}
+
+@keyframes bg-flash {
+    0% {
+        background-color: #0f0f0f;
+    }
+    50% {
+        background-color: #ff00ff33;
+    }
+    100% {
+        background-color: #0f0f0f;
+    }
+}
